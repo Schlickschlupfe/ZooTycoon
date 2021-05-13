@@ -1,6 +1,8 @@
-package animals;
+package animals.mammal;
 
-import continent.Europe;
+import animals.Continent;
+import animals.Denture;
+import animals.Fur;
 
 public class Horse extends Ungulate {
 
@@ -20,7 +22,7 @@ public class Horse extends Ungulate {
         colour,
         createFur(),
         createDenture(),
-        new Europe(),
+        Continent.EUROPE,
         false);
     this.setManeLength(maneLength);
     this.setBlaze(blaze);

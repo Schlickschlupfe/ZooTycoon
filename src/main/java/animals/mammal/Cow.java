@@ -1,6 +1,8 @@
-package animals;
+package animals.mammal;
 
-import continent.Europe;
+import animals.Continent;
+import animals.Denture;
+import animals.Fur;
 
 public class Cow extends Ungulate {
 
@@ -14,7 +16,7 @@ public class Cow extends Ungulate {
         colour,
         new Fur(true, false, false),
         new Denture(40, true, false, false),
-        new Europe(),
+        Continent.EUROPE,
         true);
   }
 

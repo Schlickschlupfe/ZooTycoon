@@ -1,40 +1,39 @@
 package animals;
 
-import continent.Continent;
-
 public abstract class Animal {
-
   // Properties
-
-  Continent whichContinent;
+  Continent continent;
   private String species;
   private String habitat;
   private double size;
   private int numberOfEyes;
   private String colour;
-  private String skintype;
+  private String skinType;
 
   // Constructors
-
   public Animal(
       String species,
       String habitat,
       double size,
       int numberOfEyes,
       String colour,
-      String skintype,
-      Continent whichContinent) {
+      String skinType,
+      Continent continent) {
     super();
-    this.setSpecies(species);
-    this.setHabitat(habitat);
-    this.setSize(size);
-    this.setNumberOfEyes(numberOfEyes);
-    this.setColour(colour);
-    this.setSkintype(skintype);
+    this.species = species;
+    this.habitat = habitat;
+    this.size = size;
+    this.numberOfEyes = numberOfEyes;
+    this.colour = colour;
+    this.skinType = skinType;
+    this.continent = continent;
+  }
+
+  public void printContinent() {
+    System.out.println("Animal " + getSpecies() + " lives in " + getContinent());
   }
 
   // Methods
-
   public abstract void move();
 
   public abstract void eat();
@@ -42,6 +41,13 @@ public abstract class Animal {
   public abstract void sleep();
 
   // Getter and Setter
+  public Continent getContinent() {
+    return continent;
+  }
+
+  public void setContinent(Continent continent) {
+    this.continent = continent;
+  }
 
   public String getSpecies() {
     return species;
@@ -83,11 +89,11 @@ public abstract class Animal {
     this.colour = colour;
   }
 
-  public String getSkintype() {
-    return skintype;
+  public String getSkinType() {
+    return skinType;
   }
 
-  public void setSkintype(String skintype) {
-    this.skintype = skintype;
+  public void setSkinType(String skinType) {
+    this.skinType = skinType;
   }
 }

@@ -1,11 +1,8 @@
-package animals;
+package animals.reptile;
 
-import continent.Continent;
+import animals.Continent;
 
 public abstract class Snake extends Reptile {
-
-  // Constructors
-
   public Snake(
       String species,
       String habitat,
@@ -15,8 +12,6 @@ public abstract class Snake extends Reptile {
       Continent whichContinent) {
     super(species, habitat, size, colour, skintype, whichContinent, true, false);
   }
-
-  // Methods
 
   @Override
   public void move() {

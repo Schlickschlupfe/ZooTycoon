@@ -1,6 +1,6 @@
-package animals;
+package animals.amphibia;
 
-import continent.Europe;
+import animals.Continent;
 
 public class FireSalamander extends Amphibian {
 
@@ -12,7 +12,7 @@ public class FireSalamander extends Amphibian {
         "moist mixed deciduous forests",
         size,
         "black and yellow",
-        new Europe(),
+        Continent.EUROPE,
         true);
   }
 

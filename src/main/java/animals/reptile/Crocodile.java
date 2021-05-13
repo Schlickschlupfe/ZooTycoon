@@ -1,6 +1,6 @@
-package animals;
+package animals.reptile;
 
-import continent.Africa;
+import animals.Continent;
 
 public class Crocodile extends Reptile {
 
@@ -13,7 +13,7 @@ public class Crocodile extends Reptile {
         size,
         "grey-green",
         "hornscale",
-        new Africa(),
+        Continent.AFRICA,
         false,
         false);
   }

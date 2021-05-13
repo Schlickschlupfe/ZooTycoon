@@ -1,6 +1,8 @@
-package animals;
+package animals.mammal;
 
-import continent.Continent;
+import animals.Continent;
+import animals.Denture;
+import animals.Fur;
 
 public abstract class Ungulate extends Mammal {
 

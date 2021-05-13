@@ -1,6 +1,8 @@
-package animals;
+package animals.mammal;
 
-import continent.Africa;
+import animals.Continent;
+import animals.Denture;
+import animals.Fur;
 
 public class Giraffe extends Ungulate {
 
@@ -16,7 +18,7 @@ public class Giraffe extends Ungulate {
         "yellow-brown",
         createFur(),
         createDenture(),
-        new Africa(),
+        Continent.AFRICA,
         true);
     setHooves(4);
   }

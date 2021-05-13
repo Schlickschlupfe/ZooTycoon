@@ -1,13 +1,13 @@
-package animals;
+package animals.amphibia;
 
-import continent.SouthAmerica;
+import animals.Continent;
 
 public class Axolotl extends Amphibian {
 
   // Constructors
 
   public Axolotl(double size, String colour) {
-    super("axolotl", "lake", size, colour, new SouthAmerica(), false);
+    super("axolotl", "lake", size, colour, Continent.SOUTH_AMERICA, false);
   }
 
   // Methods

@@ -1,6 +1,7 @@
-package animals;
+package animals.amphibia;
 
-import continent.Continent;
+import animals.Animal;
+import animals.Continent;
 
 public abstract class Amphibian extends Animal {
 
@@ -15,7 +16,7 @@ public abstract class Amphibian extends Animal {
       String habitat,
       double size,
       String colour,
-      Continent whichContinent,
+      Continent continent,
       boolean toxic) {
     super(
         species,
@@ -24,7 +25,7 @@ public abstract class Amphibian extends Animal {
         2,
         colour,
         "smooth, slimy skin that is covered with mucus secretions",
-        whichContinent);
+        continent);
     this.setToxic(toxic);
   }
 
