@@ -1,36 +1,25 @@
 package animals.mammal;
 
+import animals.Colouring;
 import animals.Continent;
 import animals.Denture;
-import animals.Fur;
+import animals.Habitat;
 
 public class Giraffe extends Ungulate {
 
-  // Properties
-  private int hooves;
+  Mane mane;
 
-  // Constructors
   public Giraffe(double size) {
     super(
         "giraffe",
-        "grasland, steppe",
+        Habitat.STEPPE,
         size,
-        "yellow-brown",
-        createFur(),
-        createDenture(),
+        Colouring.BROWN_YELLOW_SPOTTED,
+        Fur.CAMOUFLAGE,
+        Denture.VEGETARIAN,
         Continent.AFRICA,
         true);
-    setHooves(4);
-  }
-
-  // Methods
-
-  private static Fur createFur() {
-    return new Fur(true, false, false);
-  }
-
-  private static Denture createDenture() {
-    return new Denture(40, true, false, false);
+    setMane(Mane.STANDING);
   }
 
   @Override
@@ -38,19 +27,14 @@ public class Giraffe extends Ungulate {
     System.out.println("The giraffe is a vegetarian.");
   }
 
-  // Getter and Setter
-
-  public int getHooves() {
-    return hooves;
+  public Mane getMane() {
+    return mane;
   }
 
-  public void setHooves(int hooves) {
-    this.hooves = hooves;
+  public void setMane(Mane mane) {
+    this.mane = mane;
   }
 
   @Override
-  public void sleep() {
-    // TODO Auto-generated method stub
-
-  }
+  public void sleep() {}
 }

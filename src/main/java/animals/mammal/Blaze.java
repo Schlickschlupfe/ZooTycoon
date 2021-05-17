@@ -1,0 +1,16 @@
+package animals.mammal;
+
+public enum Blaze {
+  BLAZE,
+  STRIPE,
+  STRIPE_AND_SNIP,
+  IRREGULAR_BLAZE,
+  INTERRUPTED_STRIPE,
+  BALD_FACE,
+  FAINT_STAR,
+  STAR,
+  STAR_AND_STRIPE,
+  IRREGULAR_STAR,
+  SNIP,
+  LIP_MARKING;
+}

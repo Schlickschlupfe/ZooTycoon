@@ -3,20 +3,20 @@ package animals;
 public abstract class Animal {
   // Properties
   Continent continent;
+  Habitat habitat;
+  Colouring colouring;
   private String species;
-  private String habitat;
   private double size;
   private int numberOfEyes;
-  private String colour;
   private String skinType;
 
   // Constructors
   public Animal(
       String species,
-      String habitat,
+      Habitat habitat,
       double size,
       int numberOfEyes,
-      String colour,
+      Colouring colouring,
       String skinType,
       Continent continent) {
     super();
@@ -24,7 +24,7 @@ public abstract class Animal {
     this.habitat = habitat;
     this.size = size;
     this.numberOfEyes = numberOfEyes;
-    this.colour = colour;
+    this.colouring = colouring;
     this.skinType = skinType;
     this.continent = continent;
   }
@@ -57,11 +57,11 @@ public abstract class Animal {
     this.species = species;
   }
 
-  public String getHabitat() {
+  public Habitat getHabitat() {
     return habitat;
   }
 
-  public void setHabitat(String habitat) {
+  public void setHabitat(Habitat habitat) {
     this.habitat = habitat;
   }
 
@@ -81,12 +81,12 @@ public abstract class Animal {
     this.numberOfEyes = numberOfEyes;
   }
 
-  public String getColour() {
-    return colour;
+  public Colouring getColouring() {
+    return colouring;
   }
 
-  public void setColour(String colour) {
-    this.colour = colour;
+  public void setColouring(Colouring colouring) {
+    this.colouring = colouring;
   }
 
   public String getSkinType() {

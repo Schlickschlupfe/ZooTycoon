@@ -1,26 +1,23 @@
 package animals.mammal;
 
+import animals.Colouring;
 import animals.Continent;
 import animals.Denture;
-import animals.Fur;
+import animals.Habitat;
 
 public class Cow extends Ungulate {
 
-  // Constructors
-
-  public Cow(double size, String colour) {
+  public Cow(double size, Colouring colouring) {
     super(
         "cow",
-        "domesticated",
+        Habitat.DOMESTICATED,
         size,
-        colour,
-        new Fur(true, false, false),
-        new Denture(40, true, false, false),
+        colouring,
+        Fur.CAMOUFLAGE,
+        Denture.VEGETARIAN,
         Continent.EUROPE,
         true);
   }
-
-  // Methods
 
   @Override
   public void move() {

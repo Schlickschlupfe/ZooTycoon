@@ -1,8 +1,7 @@
+import animals.Colouring;
 import animals.amphibia.Axolotl;
 import animals.amphibia.FireSalamander;
-import animals.mammal.Cow;
-import animals.mammal.Giraffe;
-import animals.mammal.Horse;
+import animals.mammal.*;
 import animals.reptile.BoaConstrictor;
 import animals.reptile.Crocodile;
 
@@ -17,16 +16,14 @@ public class Main {
     croc.eat();
     croc.printContinent();
 
-    Horse horse = new Horse(1.60, "chestnut", "short", "lantern", "hannoveraner");
-    horse.sleep();
-    horse.move();
-    horse.printContinent();
+    Horse horse =
+        new Horse(1.60, Colouring.DAPPLE_GREY, Mane.MIDDLE, Blaze.BALD_FACE, "quarter horse");
 
     BoaConstrictor boa = new BoaConstrictor(4.2, "black with saddle dots");
     boa.eat();
     boa.printContinent();
 
-    Cow cow = new Cow(1.8, "brown spotted");
+    Cow cow = new Cow(1.8, Colouring.BLACK_WHITE_SPOTTED);
     cow.sleep();
     cow.printContinent();
 

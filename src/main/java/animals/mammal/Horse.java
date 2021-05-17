@@ -1,42 +1,31 @@
 package animals.mammal;
 
+import animals.Colouring;
 import animals.Continent;
 import animals.Denture;
-import animals.Fur;
+import animals.Habitat;
 
 public class Horse extends Ungulate {
 
-  // Properties
-
-  private String maneLength;
-  private String blaze;
+  Mane mane;
+  Blaze blaze;
   private String race;
 
   // Constructors
 
-  public Horse(double size, String colour, String maneLength, String blaze, String race) {
+  public Horse(double size, Colouring colouring, Mane mane, Blaze blaze, String race) {
     super(
         "horse",
-        "grasland, domesticated",
+        Habitat.DOMESTICATED,
         size,
-        colour,
-        createFur(),
-        createDenture(),
+        colouring,
+        Fur.SHORT,
+        Denture.VEGETARIAN,
         Continent.EUROPE,
         false);
-    this.setManeLength(maneLength);
+    this.setMane(mane);
     this.setBlaze(blaze);
     this.setRace(race);
-  }
-
-  // Methods
-
-  private static Fur createFur() {
-    return new Fur(false, false, false);
-  }
-
-  private static Denture createDenture() {
-    return new Denture(44, true, false, false);
   }
 
   @Override
@@ -49,21 +38,19 @@ public class Horse extends Ungulate {
     System.out.println("The horse can sleep standing and it only lies down when it feels save.");
   }
 
-  // Getter and Setter
-
-  public String getManeLength() {
-    return maneLength;
+  public Mane getMane() {
+    return mane;
   }
 
-  public void setManeLength(String maneLength) {
-    this.maneLength = maneLength;
+  public void setMane(Mane mane) {
+    this.mane = mane;
   }
 
-  public String getBlaze() {
+  public Blaze getBlaze() {
     return blaze;
   }
 
-  public void setBlaze(String blaze) {
+  public void setBlaze(Blaze blaze) {
     this.blaze = blaze;
   }
 

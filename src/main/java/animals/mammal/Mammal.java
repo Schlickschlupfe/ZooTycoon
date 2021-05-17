@@ -1,30 +1,40 @@
 package animals.mammal;
 
-import animals.Animal;
-import animals.Continent;
-import animals.Denture;
-import animals.Fur;
+import animals.*;
 
 public abstract class Mammal extends Animal {
 
-  // Properties
   Fur fur;
   Denture denture;
 
-  // Constructors
   public Mammal(
       String species,
-      String habitat,
+      Habitat habitat,
       double size,
-      String colour,
+      Colouring colouring,
       Fur fur,
       Denture denture,
-      Continent whichContinent) {
-    super(species, habitat, size, 2, colour, "Fur", whichContinent);
+      Continent continent) {
+    super(species, habitat, size, 2, colouring, "Fur", continent);
     this.fur = fur;
     this.denture = denture;
   }
 
   // Methods
 
+  public Denture getDenture() {
+    return denture;
+  }
+
+  public void setDenture(Denture denture) {
+    this.denture = denture;
+  }
+
+  public Fur getFur() {
+    return fur;
+  }
+
+  public void setFur(Fur fur) {
+    this.fur = fur;
+  }
 }

@@ -1,0 +1,22 @@
+package animals;
+
+public enum Colouring {
+  BLACK,
+  WHITE,
+  BROWN,
+  GREY,
+  RED,
+  BLUE,
+  YELLOW,
+  GREEN,
+  VIOLET,
+  SAND,
+  ORANGE,
+  DUN,
+  DAPPLE_GREY,
+  ORANGE_BLACK_STRIPED,
+  BLACK_WHITE_STRIPED,
+  BROWN_WHITE_SPOTTED,
+  BLACK_WHITE_SPOTTED,
+  BROWN_YELLOW_SPOTTED;
+}
