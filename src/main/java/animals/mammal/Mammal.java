@@ -11,11 +11,12 @@ public abstract class Mammal extends Animal {
       String species,
       Habitat habitat,
       double size,
-      Colouring colouring,
+      Colouring primaryColour,
+      Colouring secondaryColour,
       Fur fur,
       Denture denture,
       Continent continent) {
-    super(species, habitat, size, 2, colouring, "Fur", continent);
+    super(species, habitat, size, 2, primaryColour, secondaryColour, "Fur", continent);
     this.fur = fur;
     this.denture = denture;
   }

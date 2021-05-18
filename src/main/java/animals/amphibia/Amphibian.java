@@ -1,7 +1,9 @@
 package animals.amphibia;
 
 import animals.Animal;
+import animals.Colouring;
 import animals.Continent;
+import animals.Habitat;
 
 public abstract class Amphibian extends Animal {
 
@@ -13,9 +15,10 @@ public abstract class Amphibian extends Animal {
 
   public Amphibian(
       String species,
-      String habitat,
+      Habitat habitat,
       double size,
-      String colour,
+      Colouring primaryColour,
+      Colouring secondaryColour,
       Continent continent,
       boolean toxic) {
     super(
@@ -23,7 +26,8 @@ public abstract class Amphibian extends Animal {
         habitat,
         size,
         2,
-        colour,
+        primaryColour,
+        secondaryColour,
         "smooth, slimy skin that is covered with mucus secretions",
         continent);
     this.setToxic(toxic);

@@ -1,13 +1,15 @@
 package animals.amphibia;
 
+import animals.Colouring;
 import animals.Continent;
+import animals.Habitat;
 
 public class Axolotl extends Amphibian {
 
   // Constructors
 
-  public Axolotl(double size, String colour) {
-    super("axolotl", "lake", size, colour, Continent.SOUTH_AMERICA, false);
+  public Axolotl(double size, Colouring primaryColour, Colouring secondaryColor) {
+    super("axolotl", Habitat.LAKE, size, primaryColour, secondaryColor, Continent.SOUTH_AMERICA, false);
   }
 
   // Methods

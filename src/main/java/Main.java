@@ -17,17 +17,17 @@ public class Main {
     croc.printContinent();
 
     Horse horse =
-        new Horse(1.60, Colouring.DAPPLE_GREY, Mane.MIDDLE, Blaze.BALD_FACE, "quarter horse");
+        new Horse(1.60, Colouring.DAPPLE_GREY, Colouring.NONE, Mane.MIDDLE, Blaze.BALD_FACE, "quarter horse");
 
-    BoaConstrictor boa = new BoaConstrictor(4.2, "black with saddle dots");
+    BoaConstrictor boa = new BoaConstrictor(4.2, Colouring.BLACK, Colouring.BROWN);
     boa.eat();
     boa.printContinent();
 
-    Cow cow = new Cow(1.8, Colouring.BLACK_WHITE_SPOTTED);
+    Cow cow = new Cow(1.8, Colouring.WHITE, Colouring.BROWN);
     cow.sleep();
     cow.printContinent();
 
-    Axolotl axolotl = new Axolotl(0.2, "pink");
+    Axolotl axolotl = new Axolotl(0.2, Colouring.PINK, Colouring.NONE);
     axolotl.sleep();
     axolotl.printContinent();
 

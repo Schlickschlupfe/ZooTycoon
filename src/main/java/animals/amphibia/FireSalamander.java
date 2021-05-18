@@ -1,6 +1,8 @@
 package animals.amphibia;
 
+import animals.Colouring;
 import animals.Continent;
+import animals.Habitat;
 
 public class FireSalamander extends Amphibian {
 
@@ -9,9 +11,10 @@ public class FireSalamander extends Amphibian {
   public FireSalamander(double size) {
     super(
         "fire salamander",
-        "moist mixed deciduous forests",
+        Habitat.FOREST,
         size,
-        "black and yellow",
+        Colouring.YELLOW,
+        Colouring.BLACK,
         Continent.EUROPE,
         true);
   }

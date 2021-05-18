@@ -7,12 +7,13 @@ import animals.Habitat;
 
 public class Cow extends Ungulate {
 
-  public Cow(double size, Colouring colouring) {
+  public Cow(double size, Colouring primaryColour, Colouring secondaryColour) {
     super(
         "cow",
         Habitat.DOMESTICATED,
         size,
-        colouring,
+        primaryColour,
+        secondaryColour,
         Fur.CAMOUFLAGE,
         Denture.VEGETARIAN,
         Continent.EUROPE,

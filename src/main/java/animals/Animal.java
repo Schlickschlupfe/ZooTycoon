@@ -16,7 +16,8 @@ public abstract class Animal {
       Habitat habitat,
       double size,
       int numberOfEyes,
-      Colouring colouring,
+      Colouring primaryColour,
+      Colouring secondaryColour,
       String skinType,
       Continent continent) {
     super();
@@ -24,7 +25,8 @@ public abstract class Animal {
     this.habitat = habitat;
     this.size = size;
     this.numberOfEyes = numberOfEyes;
-    this.colouring = colouring;
+    this.colouring = primaryColour;
+    this.colouring = secondaryColour;
     this.skinType = skinType;
     this.continent = continent;
   }

@@ -1,6 +1,8 @@
 package animals.reptile;
 
+import animals.Colouring;
 import animals.Continent;
+import animals.Habitat;
 
 public class Crocodile extends Reptile {
 
@@ -9,9 +11,10 @@ public class Crocodile extends Reptile {
   public Crocodile(double size) {
     super(
         "Crocodile",
-        "lowland, humid tropics",
+        Habitat.RIVER,
         size,
-        "grey-green",
+        Colouring.GREEN,
+        Colouring.GREY,
         "hornscale",
         Continent.AFRICA,
         false,

@@ -18,12 +18,13 @@ public abstract class Ungulate extends Mammal {
       String species,
       Habitat habitat,
       double size,
-      Colouring colouring,
+      Colouring primaryColour,
+      Colouring secondaryColour,
       Fur fur,
       Denture denture,
       Continent continent,
       boolean biungulates) {
-    super(species, habitat, size, colouring, fur, denture, continent);
+    super(species, habitat, size, primaryColour, secondaryColour, fur, denture, continent);
     this.setBiungulates(biungulates);
   }
 

@@ -13,12 +13,13 @@ public class Horse extends Ungulate {
 
   // Constructors
 
-  public Horse(double size, Colouring colouring, Mane mane, Blaze blaze, String race) {
+  public Horse(double size, Colouring primaryColour, Colouring secondaryColour, Mane mane, Blaze blaze, String race) {
     super(
         "horse",
         Habitat.DOMESTICATED,
         size,
-        colouring,
+        primaryColour,
+        secondaryColour,
         Fur.SHORT,
         Denture.VEGETARIAN,
         Continent.EUROPE,

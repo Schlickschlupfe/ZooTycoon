@@ -1,7 +1,9 @@
 package animals.reptile;
 
 import animals.Animal;
+import animals.Colouring;
 import animals.Continent;
+import animals.Habitat;
 
 public abstract class Reptile extends Animal {
   // Properties
@@ -11,14 +13,15 @@ public abstract class Reptile extends Animal {
   // Constructors
   public Reptile(
       String species,
-      String habitat,
+      Habitat habitat,
       double size,
-      String colour,
+      Colouring primaryColour,
+      Colouring secondaryColour,
       String skinType,
       Continent whichContinent,
       boolean molting,
       boolean moveSpreading) {
-    super(species, habitat, size, 2, colour, skinType, whichContinent);
+    super(species, habitat, size, 2, primaryColour, secondaryColour, skinType, whichContinent);
     this.molting = molting;
     this.moveSpreading = moveSpreading;
   }
