@@ -1,14 +1,13 @@
 package animals.mammal;
 
-import animals.Colouring;
-import animals.Continent;
-import animals.Denture;
-import animals.Habitat;
+import animals.*;
 
 public class Cow extends Ungulate {
 
   public Cow(double size, Colouring primaryColour, Colouring secondaryColour) {
     super(
+        FeedingBehavior.HERBIVORE,
+        BehaviorTowardsPeople.NEUTRAL,
         "cow",
         Habitat.DOMESTICATED,
         size,
@@ -17,7 +16,8 @@ public class Cow extends Ungulate {
         Fur.CAMOUFLAGE,
         Denture.VEGETARIAN,
         Continent.EUROPE,
-        true);
+        true,
+        3);
   }
 
   @Override

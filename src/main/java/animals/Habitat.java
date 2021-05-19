@@ -13,5 +13,7 @@ public enum Habitat {
   TUNDRA,
   TAIGA,
   RAINFOREST,
+  ICE_DESERT,
+  VERY_ADAPTABLE,
   DOMESTICATED;
 }

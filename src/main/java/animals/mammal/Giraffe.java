@@ -1,9 +1,6 @@
 package animals.mammal;
 
-import animals.Colouring;
-import animals.Continent;
-import animals.Denture;
-import animals.Habitat;
+import animals.*;
 
 public class Giraffe extends Ungulate {
 
@@ -11,6 +8,8 @@ public class Giraffe extends Ungulate {
 
   public Giraffe(double size) {
     super(
+        FeedingBehavior.HERBIVORE,
+        BehaviorTowardsPeople.SHY,
         "giraffe",
         Habitat.STEPPE,
         size,
@@ -19,7 +18,8 @@ public class Giraffe extends Ungulate {
         Fur.CAMOUFLAGE,
         Denture.VEGETARIAN,
         Continent.AFRICA,
-        true);
+        true,
+        3);
     setMane(Mane.STANDING);
   }
 

@@ -1,39 +1,37 @@
 package animals.amphibia;
 
-import animals.Animal;
-import animals.Colouring;
-import animals.Continent;
-import animals.Habitat;
+import animals.*;
 
 public abstract class Amphibian extends Animal {
 
-  // Properties
-
   private boolean toxic;
 
-  // Constructors
 
   public Amphibian(
+      FeedingBehavior feedingBehavior,
+      BehaviorTowardsPeople behaviorTowardsPeople,
       String species,
       Habitat habitat,
       double size,
       Colouring primaryColour,
       Colouring secondaryColour,
       Continent continent,
+      int neededStability,
       boolean toxic) {
     super(
-        species,
-        habitat,
-        size,
-        2,
-        primaryColour,
-        secondaryColour,
-        "smooth, slimy skin that is covered with mucus secretions",
-        continent);
+            feedingBehavior,
+            behaviorTowardsPeople,
+            species,
+            habitat,
+            size,
+            2,
+            primaryColour,
+            secondaryColour,
+            "smooth, slimy skin that is covered with mucus secretions",
+            continent, neededStability);
     this.setToxic(toxic);
   }
 
-  // Methods
 
   @Override
   public abstract void move();
@@ -44,12 +42,10 @@ public abstract class Amphibian extends Animal {
   @Override
   public abstract void sleep();
 
-  // Getter and Setter
 
   public boolean isToxic() {
     return toxic;
   }
-
   public void setToxic(boolean toxic) {
     this.toxic = toxic;
   }

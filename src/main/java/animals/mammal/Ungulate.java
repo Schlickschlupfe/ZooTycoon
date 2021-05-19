@@ -1,9 +1,6 @@
 package animals.mammal;
 
-import animals.Colouring;
-import animals.Continent;
-import animals.Denture;
-import animals.Habitat;
+import animals.*;
 
 public abstract class Ungulate extends Mammal {
 
@@ -15,6 +12,8 @@ public abstract class Ungulate extends Mammal {
   // Constructors
 
   public Ungulate(
+      FeedingBehavior feedingBehavior,
+      BehaviorTowardsPeople behaviorTowardsPeople,
       String species,
       Habitat habitat,
       double size,
@@ -23,8 +22,9 @@ public abstract class Ungulate extends Mammal {
       Fur fur,
       Denture denture,
       Continent continent,
-      boolean biungulates) {
-    super(species, habitat, size, primaryColour, secondaryColour, fur, denture, continent);
+      boolean biungulates,
+      int neededStability) {
+    super(feedingBehavior, behaviorTowardsPeople, species, habitat, size, primaryColour, secondaryColour, fur, denture, continent, neededStability);
     this.setBiungulates(biungulates);
   }
 

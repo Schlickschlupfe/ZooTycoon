@@ -1,19 +1,30 @@
 package animals.reptile;
 
-import animals.Colouring;
-import animals.Continent;
-import animals.Habitat;
+import animals.*;
 
 public abstract class Snake extends Reptile {
   public Snake(
+      FeedingBehavior feedingBehavior,
+      BehaviorTowardsPeople behaviorTowardsPeople,
       String species,
       Habitat habitat,
       double size,
       Colouring primaryColour,
       Colouring secondaryColour,
       String skinType,
-      Continent whichContinent) {
-    super(species, habitat, size, primaryColour, secondaryColour, skinType, whichContinent, true, false);
+      Continent whichContinent,
+          int neededStability) {
+    super(
+            feedingBehavior,
+            behaviorTowardsPeople,
+            species, habitat, size,
+            primaryColour,
+            secondaryColour,
+            skinType,
+            whichContinent,
+            neededStability,
+            true,
+            false);
   }
 
   @Override

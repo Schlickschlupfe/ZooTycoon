@@ -8,6 +8,8 @@ public abstract class Mammal extends Animal {
   Denture denture;
 
   public Mammal(
+      FeedingBehavior feedingBehavior,
+      BehaviorTowardsPeople behaviorTowardsPeople,
       String species,
       Habitat habitat,
       double size,
@@ -15,8 +17,9 @@ public abstract class Mammal extends Animal {
       Colouring secondaryColour,
       Fur fur,
       Denture denture,
-      Continent continent) {
-    super(species, habitat, size, 2, primaryColour, secondaryColour, "Fur", continent);
+      Continent continent,
+      int neededStability) {
+    super(feedingBehavior, behaviorTowardsPeople, species, habitat, size, 2, primaryColour, secondaryColour, "Fur", continent, neededStability);
     this.fur = fur;
     this.denture = denture;
   }

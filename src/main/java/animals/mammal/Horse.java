@@ -1,9 +1,6 @@
 package animals.mammal;
 
-import animals.Colouring;
-import animals.Continent;
-import animals.Denture;
-import animals.Habitat;
+import animals.*;
 
 public class Horse extends Ungulate {
 
@@ -15,6 +12,8 @@ public class Horse extends Ungulate {
 
   public Horse(double size, Colouring primaryColour, Colouring secondaryColour, Mane mane, Blaze blaze, String race) {
     super(
+        FeedingBehavior.HERBIVORE,
+        BehaviorTowardsPeople.TRUSTING,
         "horse",
         Habitat.DOMESTICATED,
         size,
@@ -23,7 +22,8 @@ public class Horse extends Ungulate {
         Fur.SHORT,
         Denture.VEGETARIAN,
         Continent.EUROPE,
-        false);
+        false,
+            3);
     this.setMane(mane);
     this.setBlaze(blaze);
     this.setRace(race);

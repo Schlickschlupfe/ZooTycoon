@@ -1,18 +1,26 @@
 package animals.amphibia;
 
-import animals.Colouring;
-import animals.Continent;
-import animals.Habitat;
+import animals.*;
 
 public class Axolotl extends Amphibian {
 
-  // Constructors
-
-  public Axolotl(double size, Colouring primaryColour, Colouring secondaryColor) {
-    super("axolotl", Habitat.LAKE, size, primaryColour, secondaryColor, Continent.SOUTH_AMERICA, false);
+  public Axolotl(
+          double size,
+          Colouring primaryColour,
+          Colouring secondaryColor) {
+    super(
+            FeedingBehavior.CARNIVORE,
+            BehaviorTowardsPeople.NEUTRAL,
+            "axolotl",
+            Habitat.LAKE,
+            size,
+            primaryColour,
+            secondaryColor,
+            Continent.SOUTH_AMERICA,
+            7,
+            false);
   }
 
-  // Methods
 
   @Override
   public void move() {
