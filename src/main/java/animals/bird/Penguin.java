@@ -7,6 +7,7 @@ public class Penguin  extends Bird{
             double size
             ) {
         super(
+                Climate.POLAR,
                 FeedingBehavior.CARNIVORE,
                 BehaviorTowardsPeople.SHY,
                 "penguin",

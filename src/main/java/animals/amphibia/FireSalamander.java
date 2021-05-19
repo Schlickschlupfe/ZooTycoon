@@ -8,6 +8,7 @@ public class FireSalamander extends Amphibian {
 
   public FireSalamander(double size) {
     super(
+        Climate.MODERATE,
         FeedingBehavior.CARNIVORE,
         BehaviorTowardsPeople.SHY,
         "fire salamander",

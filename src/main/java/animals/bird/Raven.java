@@ -5,6 +5,7 @@ import animals.*;
 public class Raven extends Bird{
     public Raven(double size) {
         super(
+                Climate.MODERATE,
                 FeedingBehavior.OMNIVORE,
                 BehaviorTowardsPeople.SHY,
                 "Raven",

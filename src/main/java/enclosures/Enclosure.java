@@ -1,11 +1,7 @@
 package enclosures;
 
 
-import animals.Animal;
-import animals.BehaviorTowardsPeople;
-import animals.FeedingBehavior;
-
-import java.sql.SQLOutput;
+import animals.*;
 
 public class Enclosure {
 
@@ -30,8 +26,11 @@ public class Enclosure {
     this.climate = climate;
     this.visitorsCanEnter = visitorsCanEnter;
     this.visitorsCanFeed = visitorsCanFeed;
+    fenceHolding();
     visitorsCanEnter();
     visitorsCanFeed();
+    whichGround();
+    climateSuitable();
   }
 
   public void fenceHolding(){
@@ -59,6 +58,48 @@ public class Enclosure {
       System.out.println("Visitors can feed");
     } else {
       visitorsCanFeed = false;
+    }
+  }
+
+  private void whichGround(){
+    if(animal.getHabitat() == Habitat.GRASSLAND){
+      System.out.println("The enhance is covered with " + Ground.GRASS + Ground.FRESH_WATER);
+    } else if(animal.getHabitat() == Habitat.DESERT){
+      System.out.println("The enhance is covered with " + Ground.SAND);
+    }else if(animal.getHabitat() == Habitat.FOREST){
+      System.out.println("The enhance is covered with " + Ground.FOREST_GROUND + Ground.EARTH);
+    }else if(animal.getHabitat() == Habitat.LAKE || animal.getHabitat() == Habitat.RIVER){
+      System.out.println("The enhance is covered with " + Ground.GRASS + Ground.EARTH + Ground.FRESH_WATER);
+    }else if(animal.getHabitat() == Habitat.DOMESTICATED){
+      System.out.println("The enhance is covered with " + Ground.GRASS + Ground.EARTH);
+    }else if(animal.getHabitat() == Habitat.ICE_DESERT){
+      System.out.println("The enhance is covered with " + Ground.SNOW + Ground.SALTWATER + Ground.STONE);
+    }else if(animal.getHabitat() == Habitat.MOUNTAINS){
+      System.out.println("The enhance is covered with " + Ground.STONE + Ground.EARTH + Ground.FOREST_GROUND);
+    }else if(animal.getHabitat() == Habitat.OCEAN){
+      System.out.println("The enhance is covered with " + Ground.SALTWATER);
+    }else if(animal.getHabitat() == Habitat.RAINFOREST){
+      System.out.println("The enhance is covered with " + Ground.TROPICAL_GROUND + Ground.FRESH_WATER);
+    }else if(animal.getHabitat() == Habitat.STEPPE){
+      System.out.println("The enhance is covered with " + Ground.SAND + Ground.GRASS + Ground.EARTH);
+    }else if(animal.getHabitat() == Habitat.SWAMP){
+      System.out.println("The enhance is covered with " + Ground.FRESH_WATER + Ground.EARTH);
+    }else if(animal.getHabitat() == Habitat.TAIGA){
+      System.out.println("The enhance is covered with " + Ground.FOREST_GROUND + Ground.EARTH + Ground.FRESH_WATER);
+    }else if(animal.getHabitat() == Habitat.TUNDRA){
+      System.out.println("The enhance is covered with " + Ground.GRASS + Ground.STONE);
+    }else {
+      System.out.println("The enhance is covered with the given ground.");
+    }
+  }
+
+  private void climateSuitable() {
+    if (climate == animal.getClimate()){
+      System.out.println("Everything is fine.");
+    }else if(climate.getHeat() < animal.getClimate().getHeat()){
+      System.out.println("A heating is needed.");
+    }else{
+      System.out.println("A air conditioner is needed.");
     }
   }
 

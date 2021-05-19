@@ -8,6 +8,7 @@ public abstract class Amphibian extends Animal {
 
 
   public Amphibian(
+      Climate climate,
       FeedingBehavior feedingBehavior,
       BehaviorTowardsPeople behaviorTowardsPeople,
       String species,
@@ -19,6 +20,7 @@ public abstract class Amphibian extends Animal {
       int neededStability,
       boolean toxic) {
     super(
+            climate,
             feedingBehavior,
             behaviorTowardsPeople,
             species,

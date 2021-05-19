@@ -12,6 +12,7 @@ public class Horse extends Ungulate {
 
   public Horse(double size, Colouring primaryColour, Colouring secondaryColour, Mane mane, Blaze blaze, String race) {
     super(
+        Climate.MODERATE,
         FeedingBehavior.HERBIVORE,
         BehaviorTowardsPeople.TRUSTING,
         "horse",

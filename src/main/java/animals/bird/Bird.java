@@ -8,6 +8,7 @@ public abstract class Bird extends Animal {
 
 
     public Bird(
+            Climate climate,
             FeedingBehavior feedingBehavior,
             BehaviorTowardsPeople behaviorTowardsPeople,
             String species,
@@ -20,6 +21,7 @@ public abstract class Bird extends Animal {
             int neededStability,
             Airworthy airworthy) {
         super(
+                climate,
                 feedingBehavior,
                 behaviorTowardsPeople,
                 species,

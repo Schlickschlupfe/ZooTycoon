@@ -9,6 +9,7 @@ public class Axolotl extends Amphibian {
           Colouring primaryColour,
           Colouring secondaryColor) {
     super(
+            Climate.SUB_TROPIC,
             FeedingBehavior.CARNIVORE,
             BehaviorTowardsPeople.NEUTRAL,
             "axolotl",

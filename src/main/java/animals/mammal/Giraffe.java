@@ -8,6 +8,7 @@ public class Giraffe extends Ungulate {
 
   public Giraffe(double size) {
     super(
+        Climate.SUB_TROPIC,
         FeedingBehavior.HERBIVORE,
         BehaviorTowardsPeople.SHY,
         "giraffe",

@@ -2,6 +2,7 @@ package animals;
 
 public abstract class Animal {
 
+  Climate climate;
   FeedingBehavior feedingBehavior;
   BehaviorTowardsPeople behaviorTowardsPeople;
   Continent continent;
@@ -15,6 +16,7 @@ public abstract class Animal {
 
 
   public Animal(
+          Climate climate,
           FeedingBehavior feedingBehavior,
           BehaviorTowardsPeople behaviorTowardsPeople,
           String species,
@@ -27,6 +29,7 @@ public abstract class Animal {
           Continent continent,
           int neededStability) {
     super();
+    this.climate = climate;
     this.feedingBehavior = feedingBehavior;
     this.behaviorTowardsPeople = behaviorTowardsPeople;
     this.species = species;
@@ -50,6 +53,7 @@ public abstract class Animal {
 
   public abstract void sleep();
 
+  public Climate getClimate(){ return climate; }
 
   public FeedingBehavior getFeedingBehavior() {
     return feedingBehavior;

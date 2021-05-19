@@ -6,6 +6,7 @@ public class Cow extends Ungulate {
 
   public Cow(double size, Colouring primaryColour, Colouring secondaryColour) {
     super(
+        Climate.MODERATE,
         FeedingBehavior.HERBIVORE,
         BehaviorTowardsPeople.NEUTRAL,
         "cow",

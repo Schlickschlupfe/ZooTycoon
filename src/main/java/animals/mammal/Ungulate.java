@@ -12,6 +12,7 @@ public abstract class Ungulate extends Mammal {
   // Constructors
 
   public Ungulate(
+      Climate climate,
       FeedingBehavior feedingBehavior,
       BehaviorTowardsPeople behaviorTowardsPeople,
       String species,
@@ -24,7 +25,7 @@ public abstract class Ungulate extends Mammal {
       Continent continent,
       boolean biungulates,
       int neededStability) {
-    super(feedingBehavior, behaviorTowardsPeople, species, habitat, size, primaryColour, secondaryColour, fur, denture, continent, neededStability);
+    super(climate, feedingBehavior, behaviorTowardsPeople, species, habitat, size, primaryColour, secondaryColour, fur, denture, continent, neededStability);
     this.setBiungulates(biungulates);
   }
 
